@@ -22,6 +22,8 @@ public class hospitals {
                 //put a method here
             } else if (placeholder == 4) {
                 //put a method here
+            } else {
+                //put a method here
             }
         }
     }
