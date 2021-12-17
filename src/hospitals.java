@@ -25,5 +25,4 @@ public class hospitals {
             }
         }
     }
-    public static
 }
