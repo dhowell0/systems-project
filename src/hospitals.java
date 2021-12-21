@@ -3,28 +3,54 @@ public class hospitals {
 
     public static void main(String[] args) {
 
-        while (true) {
-            System.out.println("Hospital Directory");
-            System.out.println("");
-            System.out.println("1. Departments");
-            System.out.println("2. Hospital name");
-            System.out.println("3. Hospital address");
-            System.out.println("4. Patient");
-            System.out.println("");
-            System.out.println("Enter directory number:");
-            Scanner input = new Scanner(System.in);
-            int placeholder = input.nextInt();
-            if (placeholder == 1) {
-                //put a method here that shows different things in department
-            } else if (placeholder == 2) {
-                //put a method here
-            } else if (placeholder == 3) {
-                //put a method here
-            } else if (placeholder == 4) {
-                //put a method here
-            } else {
-                //put a method here
+        class LinkedList{
+            private Node head;
+
+            public void insert(int value){
+
+                Node add = new Node();
+                add.value = value;
+                add.next=null;
+
+                add.next = head;
+                head = add;
+                return;
+
             }
+
+            public void insertMid(int value, int index){
+                Node add = new Node();
+                add.value = value;
+                add.next=null;
+
+                if(index == 0){
+                    insert(value);
+                } else {
+                    Node pos = head;
+
+                    for(int i = 0; i < index-1; i++){
+                        pos = pos.next;
+                    }
+                    add.next = pos.next;
+                    pos.next = add;
+                }
+            }
+
+            public void append(int value){
+                Node add = new Node();
+                add.value = value;
+                add.next=null;
+
+                if(head == null){
+                    head = add;
+                } else {
+                    Node pos = head;
+                    while(pos.next != null){
+                        pos = pos.next;
+                    }
+                    pos.next = add;
+                }
+            }
+
         }
-    }
 }
