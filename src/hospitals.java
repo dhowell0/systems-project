@@ -3,54 +3,37 @@ public class hospitals {
 
     public static void main(String[] args) {
 
-        class LinkedList{
-            private Node head;
+        class LinkedList {
+            private Node headHospital;
 
-            public void insert(int value){
+            public void insertHospital(int value) {
 
                 Node add = new Node();
                 add.value = value;
-                add.next=null;
+                add.next = null;
 
                 add.next = head;
-                head = add;
+                headHospital = add;
                 return;
 
             }
+            public void removeHospital(int value){
 
-            public void insertMid(int value, int index){
-                Node add = new Node();
-                add.value = value;
-                add.next=null;
-
-                if(index == 0){
-                    insert(value);
+                if(value==headHospital.value){
+                    headHospital=headHospital.next;
                 } else {
-                    Node pos = head;
-
-                    for(int i = 0; i < index-1; i++){
-                        pos = pos.next;
+                    Node pos= headHospital;
+                    for(int i=0; value != pos.next.value; i++){
+                        pos=pos.next;
                     }
-                    add.next = pos.next;
-                    pos.next = add;
+                    Node temp = null;
+                    temp = pos.next;
+                    pos.next = temp.next;
+                    temp=null;
                 }
             }
 
-            public void append(int value){
-                Node add = new Node();
-                add.value = value;
-                add.next=null;
-
-                if(head == null){
-                    head = add;
-                } else {
-                    Node pos = head;
-                    while(pos.next != null){
-                        pos = pos.next;
-                    }
-                    pos.next = add;
-                }
-            }
 
         }
+    }
 }
