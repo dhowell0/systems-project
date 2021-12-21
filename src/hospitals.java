@@ -6,24 +6,24 @@ public class hospitals {
         class LinkedList {
             private Node headHospital;
 
-            public void insertHospital(int value) {
+            public void insertHospital(String name) {
 
                 Node add = new Node();
-                add.value = value;
+                add.name = name;
                 add.next = null;
 
-                add.next = head;
+                add.next = headHospital;
                 headHospital = add;
                 return;
 
             }
-            public void removeHospital(int value){
+            public void removeHospital(String name){
 
-                if(value==headHospital.value){
+                if(name==headHospital.name){
                     headHospital=headHospital.next;
                 } else {
                     Node pos= headHospital;
-                    for(int i=0; value != pos.next.value; i++){
+                    for(int i=0; name != pos.next.name; i++){
                         pos=pos.next;
                     }
                     Node temp = null;
