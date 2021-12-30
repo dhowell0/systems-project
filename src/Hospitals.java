@@ -110,6 +110,7 @@ public class Hospitals {
                                                 }
                                             }
                                         }
+                                        break;
                                     case 4:
                                         //departments
 
@@ -165,6 +166,7 @@ public class Hospitals {
                                                                 }
                                                             }
                                                         }
+                                                        break;
                                                     case 4:
                                                         //nurses
 
@@ -195,18 +197,21 @@ public class Hospitals {
                                                                 }
                                                             }
                                                         }
+                                                        break;
                                                     case 5:
                                                         isCake = true;
                                                         break;
                                                 }
                                             }
                                         }
+                                        break;
                                     case 5:
                                         isValid = true;
                                         break;
                                 }
                             }
                         }
+                        break;
                     case 2:
                         isGood = true;
                 }
