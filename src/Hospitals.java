@@ -102,12 +102,13 @@ public class Hospitals {
                                             p[p.length - 1] = user5;
                                             patients = p;
                                             break;
-                                            case 2:
-                                                //ethan your stuff goes here
+                                                        case 2:
+                                                            //ethan your stuff goes here
 
 
-                                            case 3:
-                                                isGreat=true;
+
+                                                        case 3:
+                                                            isGreat=true;
                                         }
                                     }
                                 }
