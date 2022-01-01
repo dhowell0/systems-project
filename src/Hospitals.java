@@ -16,17 +16,49 @@
 //        }
 //        }
 //
-/**
- * models a hospital system
- */
+public class Hospitals {
+    private Department[] departments;
+    private String name;
+    private String address;
+    private Patient[] patients;
 
+    public Department[] getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Department[] departments) {
+        this.departments = departments;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Patient[] getPatients() {
+        return patients;
+    }
+
+    public void setPatients(Patient[] patients) {
+        this.patients = patients;
+    }
+
+    /*
 import java.util.Arrays;
 import java.util.Scanner;
-public class Hospitals {
-    /**
-     *
-     * @param args not used
-     */
+
+
     public static void main(String[] args) {
 
         //System.out.println("2. Add Hospitals");
@@ -321,6 +353,7 @@ public class Hospitals {
 
             }
         }
-            */
     }
+ */
+
 }
