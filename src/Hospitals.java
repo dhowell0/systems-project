@@ -78,17 +78,17 @@ public class Hospitals {
                                         break;
                                     case 2:
                                         //Removes Hospitals
-                                        String[] rh = new String{hospitals.length - 1];
+                                        String[] rh = new String[hospitals.length - 1];
                                         String rh1 = input.next();
                                         int k = 0;
                                         for (int i = 0; i < hospitals.length; i++) {
-                                          if (rh1 != hospitals[i]) {
-                                              rh[k]= hospitals[i];
-                                              k++;
-                                          }
-                                          else {
-                                            
-                                          }
+                                            if (rh1 != hospitals[i]) {
+                                                rh[k] = hospitals[i];
+                                                k++;
+                                            } else {
+
+                                            }
+                                        }
                                         hospitals = rh;  
                                         break;
 
@@ -114,17 +114,17 @@ public class Hospitals {
                                                         break;
                                                     case 2:
                                                         //Removes Patients
-                                                        String[] rp = new String{patients.length - 1];
+                                                        String[] rp = new String[patients.length - 1];
                                                         String rp1 = input.next();
-                                                        int k = 0;
+                                                        int t = 0;
                                                         for (int i = 0; i < patients.length; i++) {
-                                                          if (rp1 != patients[i]) {
-                                                            rp[k]= patients[i];
-                                                            k++;
-                                                          }
-                                                           else {
-                                            
-                                                          }
+                                                            if (rp1 != patients[i]) {
+                                                                rp[t] = patients[i];
+                                                                t++;
+                                                            } else {
+
+                                                            }
+                                                        }
                                                           patients = rp;  
                                                           break;
 
@@ -158,8 +158,20 @@ public class Hospitals {
                                                         departments = de;
                                                         break;
                                                     case 2:
-                                                        //ethan your stuff goes here
+                                                        //Removes Departments
+                                                        String[] rp = new String[departments.length - 1];
+                                                        String rp1 = input.next();
+                                                        int q = 0;
+                                                        for (int i = 0; i < departments.length; i++) {
+                                                            if (rp1 != departments[i]) {
+                                                                rp[q] = departments[i];
+                                                                q++;
+                                                            } else {
 
+                                                            }
+                                                        }
+                                                        patients = rp;
+                                                        break;
                                                     case 3:
                                                         //doctors
 
@@ -182,17 +194,17 @@ public class Hospitals {
                                                                         break;
                                                                     case 2:
                                                                         //Removes Doctors
-                                                                        String[] rd = new String{doctors.length - 1];
+                                                                        String[] rd = new String[doctors.length - 1];
                                                                         String rd1 = input.next();
-                                                                        int k = 0;
+                                                                        int v = 0;
                                                                         for (int i = 0; i < doctors.length; i++) {
-                                                                          if (rd1 != docotrs[i]) {
-                                                                            rd[k]= doctors[i];
-                                                                            k++;
-                                                                          }
-                                                                          else {
-                                            
-                                                                          }
+                                                                            if (rd1 != doctors[i]) {
+                                                                                rd[v] = doctors[i];
+                                                                                v++;
+                                                                            } else {
+
+                                                                            }
+                                                                        }
                                                                           hospitals = rd;  
                                                                           break;
 
@@ -226,17 +238,17 @@ public class Hospitals {
                                                                         break;
                                                                     case 2:
                                                                         //Removes Nurses
-                                                                        String[] rn = new String{nurses.length - 1];
+                                                                        String[] rn = new String[nurses.length - 1];
                                                                         String rn1 = input.next();
-                                                                        int k = 0;
+                                                                        int l = 0;
                                                                         for (int i = 0; i < nurses.length; i++) {
-                                                                          if (rn1 != nurses[i]) {
-                                                                            rn[k]= nurses[i];
-                                                                            k++;
-                                                                          }
-                                                                          else {
-                                            
-                                                                          }
+                                                                            if (rn1 != nurses[i]) {
+                                                                                rn[l] = nurses[i];
+                                                                                l++;
+                                                                            } else {
+
+                                                                            }
+                                                                        }
                                                                          nurses = rn;  
                                                                          break;
 
