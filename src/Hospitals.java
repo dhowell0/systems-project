@@ -16,12 +16,17 @@
 //        }
 //        }
 //
-
+/**
+ * models a hospital system
+ */
 
 import java.util.Arrays;
 import java.util.Scanner;
 public class Hospitals {
-
+    /**
+     *
+     * @param args not used
+     */
     public static void main(String[] args) {
 
         //System.out.println("2. Add Hospitals");
@@ -71,6 +76,9 @@ public class Hospitals {
                                 switch (user2) {
                                     case 1:
                                         String[] h = new String[hospitals.length + 1];
+                                        for (int i = 0; i < hospitals.length; i++) {
+                                            h[i] = hospitals[i];
+                                        }
                                         System.out.println("name of hospital");
                                         String user3 = input.next();
                                         h[h.length - 1] = user3;
@@ -107,6 +115,9 @@ public class Hospitals {
                                                 switch (user4) {
                                                     case 1:
                                                         String[] p = new String[patients.length + 1];
+                                                        for (int i = 0; i < patients.length; i++) {
+                                                            p[i] = patients[i];
+                                                        }
                                                         System.out.println("name of patient");
                                                         String user5 = input.next();
                                                         p[p.length - 1] = user5;
@@ -152,6 +163,9 @@ public class Hospitals {
                                                 switch (user4) {
                                                     case 1:
                                                         String[] de = new String[departments.length + 1];
+                                                        for (int i = 0; i < departments.length; i++) {
+                                                            de[i] = departments[i];
+                                                        }
                                                         System.out.println("name of department");
                                                         String user5 = input.next();
                                                         de[de.length - 1] = user5;
@@ -187,6 +201,9 @@ public class Hospitals {
                                                                 switch (user6) {
                                                                     case 1:
                                                                         String[] d = new String[doctors.length + 1];
+                                                                        for (int i = 0; i < doctors.length; i++) {
+                                                                            d[i] = doctors[i];
+                                                                        }
                                                                         System.out.println("name of doctor");
                                                                         String user7 = input.next();
                                                                         d[d.length - 1] = user7;
@@ -231,6 +248,9 @@ public class Hospitals {
                                                                 switch (user6) {
                                                                     case 1:
                                                                         String[] n = new String[nurses.length + 1];
+                                                                        for (int i = 0; i < nurses.length; i++) {
+                                                                            n[i] = nurses[i];
+                                                                        }
                                                                         System.out.println("name of patient");
                                                                         String user7 = input.next();
                                                                         n[n.length - 1] = user7;
