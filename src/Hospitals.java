@@ -78,7 +78,11 @@ public class Hospitals {
                                         break;
                                     case 2:
                                         //ethan this is where your part will go
-
+                                        String[] rh = new String{hospitals.length - 1];
+                                        String rh1 = input.next();
+                                        rh[rh.length - 1] = rh1;
+                                        remove hospital = rh;
+                                        break;
 
                                     case 3:
                                         //patients
