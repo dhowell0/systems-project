@@ -77,11 +77,19 @@ public class Hospitals {
                                         hospitals = h;
                                         break;
                                     case 2:
-                                        //ethan this is where your part will go
+                                        //Removes Hospitals
                                         String[] rh = new String{hospitals.length - 1];
                                         String rh1 = input.next();
-                                        rh[rh.length - 1] = rh1;
-                                        remove hospital = rh;
+                                        int k = 0;
+                                        for (int i = 0; i < hospitals.length; i++) {
+                                          if (rh1 != hospitals[i]) {
+                                              rh[k]= hospitals[i];
+                                              k++;
+                                          }
+                                          else {
+                                            
+                                          }
+                                        hospitals = rh;  
                                         break;
 
                                     case 3:
@@ -105,8 +113,20 @@ public class Hospitals {
                                                         patients = p;
                                                         break;
                                                     case 2:
-                                                        //ethan your stuff goes here
-
+                                                        //Removes Patients
+                                                        String[] rp = new String{patients.length - 1];
+                                                        String rp1 = input.next();
+                                                        int k = 0;
+                                                        for (int i = 0; i < patients.length; i++) {
+                                                          if (rp1 != patients[i]) {
+                                                            rp[k]= patients[i];
+                                                            k++;
+                                                          }
+                                                           else {
+                                            
+                                                          }
+                                                          patients = rp;  
+                                                          break;
 
                                                     case 3:
                                                         isGreat = true;
@@ -161,7 +181,20 @@ public class Hospitals {
                                                                         doctors = d;
                                                                         break;
                                                                     case 2:
-                                                                        //ethan your stuff goes here
+                                                                        //Removes Doctors
+                                                                        String[] rd = new String{doctors.length - 1];
+                                                                        String rd1 = input.next();
+                                                                        int k = 0;
+                                                                        for (int i = 0; i < doctors.length; i++) {
+                                                                          if (rd1 != docotrs[i]) {
+                                                                            rd[k]= doctors[i];
+                                                                            k++;
+                                                                          }
+                                                                          else {
+                                            
+                                                                          }
+                                                                          hospitals = rd;  
+                                                                          break;
 
 
                                                                     case 3:
@@ -192,7 +225,20 @@ public class Hospitals {
                                                                         nurses = n;
                                                                         break;
                                                                     case 2:
-                                                                        //ethan your stuff goes here
+                                                                        //Removes Nurses
+                                                                        String[] rn = new String{nurses.length - 1];
+                                                                        String rn1 = input.next();
+                                                                        int k = 0;
+                                                                        for (int i = 0; i < nurses.length; i++) {
+                                                                          if (rn1 != nurses[i]) {
+                                                                            rn[k]= nurses[i];
+                                                                            k++;
+                                                                          }
+                                                                          else {
+                                            
+                                                                          }
+                                                                         nurses = rn;  
+                                                                         break;
 
 
                                                                     case 3:
