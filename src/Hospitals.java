@@ -60,13 +60,13 @@ public class Hospitals {
             return;
         }
 
-        Department[] n = new Department[departments.length + 1];
+        Department[] d = new Department[departments.length + 1];
         for (int i = 0; i < departments.length; i++) {
-            n[i] = departments[i];
+            d[i] = departments[i];
         }
 
-        n[n.length - 1] = nurse;
-        nurses = n;
+        d[d.length - 1] = department;
+        departments = d;
     }   
     
     Scanner input = new Scanner(System.in);
