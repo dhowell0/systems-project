@@ -53,9 +53,25 @@ public class Hospitals {
     public void setPatients(Patient[] patients) {
         this.patients = patients;
     }
+    public void addDepartment(Department department) {
+        if (department == null) {
+            departments = new Department[1];
+            departments[0] = department;
+            return;
+        }
+
+        Department[] n = new Department[departments.length + 1];
+        for (int i = 0; i < departments.length; i++) {
+            n[i] = departments[i];
+        }
+
+        n[n.length - 1] = nurse;
+        nurses = n;
+    }   
+    
     Scanner input = new Scanner(System.in);
     public void menu() {
-        String mainMenu = "Hospital Menu: \n  1. Edit Name \n  2. Edit Location \n  3. Add Department \n 4. Return";
+        String mainMenu = "Hospital Menu: \n  1. Edit Hospital Name \n  2. Edit Location \n  3. Add Department \n 4. Remove Hospital 5. Return";
         int choice = Util.getIntVal(mainMenu, 1, 4);
         switch (choice){
             case 1:
@@ -71,8 +87,22 @@ public class Hospitals {
                 Department newDepartment = new Department(name);
                 newDepartment.menu();
                 addDepartment(newDepartment);
-                break;    
+                break;  
             case 4:
+                Hospital[] h = new Hospital[hospitals.length - 1];
+                String h1 = input.next();
+                int g = 0;
+                for (int i = 0; i < hospitals.length; i++) {
+                    if (h1.equals(hospitals[i].getName())) {
+                        h[g] = hospitals[i];
+                        g++;
+                    } else {
+
+                    }
+                }
+                hospitals = h;
+                break;
+            case 5:
                 return;
         }    
     }
