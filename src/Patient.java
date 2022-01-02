@@ -35,4 +35,22 @@ public class Patient {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public void menu() {
+        String mainMenu = "Patient Menu: \n  1. Edit Name \n  2. Edit Date \n  3. Edit DOB \n  4. Edit SSN \n  5. Return";
+        int choice = Util.getIntVal(mainMenu, 1, 5);
+        switch (choice) {
+            case 1:
+                setName(Util.getStringVal("Patient Name: ", 1, 999));
+                break;
+            case 2:
+                setDate(Util.getStringVal("Date: ", 1, 999));
+            case 3:
+                setDob(Util.getStringVal("Date of Birth: ", 1, 999));
+            case 4:
+                setSsn(Util.getIntVal("Social Security Number: ", 1, 99999));
+            case 5:
+                return;
+        }
+    }
 }
