@@ -53,7 +53,35 @@ public class Hospitals {
     public void setPatients(Patient[] patients) {
         this.patients = patients;
     }
-
+    Scanner input = new Scanner(System.in);
+    public void menu() {
+        String mainMenu = "Hospital Menu: \n  1. Edit Name \n  2. Edit Location \n  3. Add Department \n 4. Return";
+        int choice = Util.getIntVal(mainMenu, 1, 4);
+        switch (choice){
+            case 1:
+                setName(Util.getStringVal("Hospital Name: ", 1, 999));
+                break;
+            case 2:
+                setLocation(Util.getStringVal("Location: ", 1, 999));
+                break;
+            case 3:
+                //add Department
+                System.out.println("Name of Department: ");
+                String name = input.next();
+                Department newDepartment = new Department(name);
+                newDepartment.menu();
+                addDepartment(newDepartment);
+                break;    
+            case 4:
+                return;
+    
+    
+    
+    
+    
+    
+    
+    
     /* sadness --> 
 import java.util.Arrays;
 import java.util.Scanner;
