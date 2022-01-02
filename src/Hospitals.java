@@ -74,10 +74,10 @@ public class Hospitals {
                 break;    
             case 4:
                 return;
-    
-    
-    
-    
+        }    
+    }
+}
+   
     
     
     
