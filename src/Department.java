@@ -54,10 +54,6 @@ public class Department {
         doctors = d;
     }
 
-    public void removeDoctor(Doctor doctor){
-
-    }
-
     public void addNurse(Nurse nurse) {
         if (nurses == null) {
             nurses = new Nurse[1];
@@ -76,7 +72,7 @@ public class Department {
     Scanner input = new Scanner(System.in);
     public void menu() {
         String mainMenu = "Department Menu: \n  1. Edit Name \n  2. Edit Location \n  3. Add Doctor \n  4. Remove Doctor \n  5. Edit Doctors \n  6. Add Nurse \n  7. Remove Nurse \n  8. Edit Nurses \n  9. Return";
-        int choice = Util.getIntVal(mainMenu, 1, 5);
+        int choice = Util.getIntVal(mainMenu, 1, 9);
         switch (choice){
             case 1:
                 setName(Util.getStringVal("Department Name: ", 1, 999));
@@ -94,7 +90,22 @@ public class Department {
                 break;
             case 4:
                 //remove doctors
+                if (doctors == null) {
+                    return;
+                }
+                Doctor[] rd = new Doctor[doctors.length - 1];
+                String rd1 = input.next();
+                int v = 0;
+                for (int i = 0; i < doctors.length; i++) {
+                    if (rd1.equals(doctors[i].getName())) {
+                        rd[v] = doctors[i];
+                        v++;
+                    } else {
 
+                    }
+                }
+                doctors = rd;
+                break;
             case 5:
                 //edit doctors
                 String prompt2 = "0: Abort\n";
@@ -115,7 +126,19 @@ public class Department {
                 break;
             case 7:
                 //remove nurses
+                Nurse[] r = new Nurse[nurses.length - 1];
+                String r1 = input.next();
+                int g = 0;
+                for (int i = 0; i < nurses.length; i++) {
+                    if (r1.equals(nurses[i].getName())) {
+                        r[g] = nurses[i];
+                        g++;
+                    } else {
 
+                    }
+                }
+                nurses = r;
+                break;
             case 8:
                 //edit nurses
                 String prompt = "0: Abort\n";
@@ -128,8 +151,6 @@ public class Department {
 
                 break;
             case 9:
-
-            case 10:
                 return;
         }
     }
