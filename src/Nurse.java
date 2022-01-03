@@ -55,10 +55,13 @@ public class Nurse {
                 break;
             case 2:
                 setSpecialty(Util.getStringVal("Specialty: ", 1, 999));
+                break;
             case 3:
                 setPosition(Util.getStringVal("Position: ", 1, 999));
+                break;
             case 4:
                 setBadgeNumber(Util.getIntVal("Badge Number: ", 1, 99999));
+                break;
             case 5:
                 return;
         }

@@ -55,10 +55,13 @@ public class Patient {
                 break;
             case 2:
                 setDate(Util.getStringVal("Date: ", 1, 999));
+                break;
             case 3:
                 setDob(Util.getStringVal("Date of Birth: ", 1, 999));
+                break;
             case 4:
                 setSsn(Util.getIntVal("Social Security Number: ", 1, 99999));
+                break;
             case 5:
                 return;
         }

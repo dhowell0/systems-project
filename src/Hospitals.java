@@ -85,6 +85,7 @@ public class Hospitals {
 
         d[d.length - 1] = department;
         departments = d;
+        return;
     }
     public void addPatient(Patient patient) {
         if (patient == null) {
@@ -100,6 +101,7 @@ public class Hospitals {
 
         y[y.length - 1] = patient;
         patients = y;
+        return;
     }
     Scanner input = new Scanner(System.in);
 

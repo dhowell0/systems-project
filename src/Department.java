@@ -60,6 +60,7 @@ public class Department {
 
         d[d.length - 1] = doctor;
         doctors = d;
+        return;
     }
 
     /**
@@ -80,6 +81,7 @@ public class Department {
 
         n[n.length - 1] = nurse;
         nurses = n;
+        return;
     }
     Scanner input = new Scanner(System.in);
 

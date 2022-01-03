@@ -80,5 +80,6 @@ public class Runner {
 
         h[h.length - 1] = hospital;
         hospitals = h;
+        return;
     }
 }
