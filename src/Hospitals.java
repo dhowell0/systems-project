@@ -70,7 +70,7 @@ public class Hospitals {
      * @param department
      */
     public void addDepartment(Department department) {
-        if (department == null) {
+        if (departments == null) {
             departments = new Department[1];
             departments[0] = department;
             return;
