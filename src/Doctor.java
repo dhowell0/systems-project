@@ -50,21 +50,25 @@ public class Doctor {
     public void menu() {
         String mainMenu = "Doctor Menu: \n  1. Edit Name \n  2. Edit Specialty \n  3. Edit Position \n  4. Edit Badge Number \n  5. Return";
         int choice = Util.getIntVal(mainMenu, 1, 5);
-        switch (choice) {
-            case 1:
-                setName(Util.getStringVal("Doctor Name: ", 1, 999));
-                break;
-            case 2:
-                setSpecialty(Util.getStringVal("Specialty: ", 1, 999));
-                break;
-            case 3:
-                setPosition(Util.getStringVal("Position: ", 1, 999));
-                break;
-            case 4:
-                setBadgeNumber(Util.getIntVal("Badge Number: ", 1, 99999));
-                break;
-            case 5:
-                return;
+        boolean isValid = false;
+        while (!isValid) {
+            switch (choice) {
+                case 1:
+                    setName(Util.getStringVal("Doctor Name: ", 1, 999));
+                    break;
+                case 2:
+                    setSpecialty(Util.getStringVal("Specialty: ", 1, 999));
+                    break;
+                case 3:
+                    setPosition(Util.getStringVal("Position: ", 1, 999));
+                    break;
+                case 4:
+                    setBadgeNumber(Util.getIntVal("Badge Number: ", 1, 99999));
+                    break;
+                case 5:
+                    isValid = true;
+                    break;
+            }
         }
     }
 }
