@@ -1,3 +1,6 @@
+/**
+ * holds the primitives for a doctor
+ */
 public class Doctor {
     private String name;
     private String specialty;
@@ -41,6 +44,9 @@ public class Doctor {
         this.badgeNumber = badgeNumber;
     }
 
+    /**
+     * runs a menu
+     */
     public void menu() {
         String mainMenu = "Doctor Menu: \n  1. Edit Name \n  2. Edit Specialty \n  3. Edit Position \n  4. Edit Badge Number \n  5. Return";
         int choice = Util.getIntVal(mainMenu, 1, 5);

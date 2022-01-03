@@ -6,6 +6,10 @@ public class Department {
     private Doctor[] doctors;
     private Nurse[] nurses;
 
+    public Department(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -38,6 +42,10 @@ public class Department {
         this.nurses = nurse;
     }
 
+    /**
+     * add a doctor object
+     * @param doctor
+     */
     public void addDoctor(Doctor doctor) {
         if (doctors == null) {
             doctors = new Doctor[1];
@@ -54,6 +62,10 @@ public class Department {
         doctors = d;
     }
 
+    /**
+     * add a nurse object
+     * @param nurse
+     */
     public void addNurse(Nurse nurse) {
         if (nurses == null) {
             nurses = new Nurse[1];
@@ -70,6 +82,10 @@ public class Department {
         nurses = n;
     }
     Scanner input = new Scanner(System.in);
+
+    /**
+     * runs a menu
+     */
     public void menu() {
         String mainMenu = "Department Menu: \n  1. Edit Name \n  2. Edit Location \n  3. Add Doctor \n  4. Remove Doctor \n  5. Edit Doctors \n  6. Add Nurse \n  7. Remove Nurse \n  8. Edit Nurses \n  9. Return";
         int choice = Util.getIntVal(mainMenu, 1, 9);

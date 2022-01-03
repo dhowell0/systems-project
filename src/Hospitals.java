@@ -16,11 +16,24 @@
 //        }
 //        }
 //
+import java.util.Scanner;
+
+/**
+ * holds all da hospitals
+ */
 public class Hospitals {
     private Department[] departments;
     private String name;
     private String address;
     private Patient[] patients;
+
+    /**
+     *
+     * @param name
+     */
+    public Hospitals(String name) {
+        this.name = name;
+    }
 
     public Department[] getDepartments() {
         return departments;
@@ -53,6 +66,11 @@ public class Hospitals {
     public void setPatients(Patient[] patients) {
         this.patients = patients;
     }
+
+    /**
+     *
+     * @param department
+     */
     public void addDepartment(Department department) {
         if (department == null) {
             departments = new Department[1];
@@ -67,18 +85,36 @@ public class Hospitals {
 
         d[d.length - 1] = department;
         departments = d;
-    }   
-    
+    }
+    public void addPatient(Patient patient) {
+        if (patient == null) {
+            patients = new Patient[1];
+            patients[0] = patient;
+            return;
+        }
+
+        Patient[] y = new Patient[patients.length + 1];
+        for (int i = 0; i < patients.length; i++) {
+            y[i] = patients[i];
+        }
+
+        y[y.length - 1] = patient;
+        patients = y;
+    }
     Scanner input = new Scanner(System.in);
+
+    /**
+     * runs a menu
+     */
     public void menu() {
-        String mainMenu = "Hospital Menu: \n  1. Edit Hospital Name \n  2. Edit Location \n  3. Add Department \n 4. Remove Hospital 5. Return";
+        String mainMenu = "Hospital Menu: \n  1. Edit Hospital Name \n  2. Edit Address \n  3. Add Department \n 4. Remove Department 5. Return";
         int choice = Util.getIntVal(mainMenu, 1, 4);
         switch (choice){
             case 1:
                 setName(Util.getStringVal("Hospital Name: ", 1, 999));
                 break;
             case 2:
-                setLocation(Util.getStringVal("Location: ", 1, 999));
+                setAddress(Util.getStringVal("Address: ", 1, 999));
                 break;
             case 3:
                 //add Department
@@ -89,20 +125,56 @@ public class Hospitals {
                 addDepartment(newDepartment);
                 break;  
             case 4:
-                Hospital[] h = new Hospital[hospitals.length - 1];
+                Department[] h = new Department[departments.length - 1];
                 String h1 = input.next();
                 int g = 0;
-                for (int i = 0; i < hospitals.length; i++) {
-                    if (h1.equals(hospitals[i].getName())) {
-                        h[g] = hospitals[i];
+                for (int i = 0; i < departments.length; i++) {
+                    if (h1.equals(departments[i].getName())) {
+                        h[g] = departments[i];
                         g++;
                     } else {
 
                     }
                 }
-                hospitals = h;
+                departments = h;
                 break;
             case 5:
+                //add patients
+                System.out.println("Name of Patient: ");
+                String name2 = input.next();
+                Patient newPatient = new Patient(name2);
+                newPatient.menu();
+                addPatient(newPatient);
+                break;
+            case 6:
+                //remove patients
+                if (patients == null) {
+                    return;
+                }
+                Patient[] rd = new Patient[patients.length - 1];
+                String rd1 = input.next();
+                int v = 0;
+                for (int i = 0; i < patients.length; i++) {
+                    if (rd1.equals(patients[i].getName())) {
+                        rd[v] = patients[i];
+                        v++;
+                    } else {
+
+                    }
+                }
+                patients = rd;
+                break;
+            case 7:
+                //edit doctors
+                String prompt2 = "0: Abort\n";
+                for (int i = 0; i < patients.length; i++) {
+                    prompt2 += ((i+1) + ": " + patients[i].getName() + "\n");
+                }
+                int doctorsChoice = Util.getIntVal(prompt2, 0, patients.length);
+                if (doctorsChoice == 0) break;
+                patients[doctorsChoice-1].menu();
+                break;
+            case 8:
                 return;
         }    
     }
@@ -414,4 +486,4 @@ import java.util.Scanner;
     }
  */
 
-}
+

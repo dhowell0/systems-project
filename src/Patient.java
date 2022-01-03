@@ -1,8 +1,15 @@
+/**
+ * holds the primitives for a patient
+ */
 public class Patient {
     private String name;
     private int ssn;
     private String dob;
     private String date;
+
+    public Patient(String name2) {
+        name = name2;
+    }
 
     public String getName() {
         return name;
@@ -36,6 +43,9 @@ public class Patient {
         this.date = date;
     }
 
+    /**
+     * runs a menu
+     */
     public void menu() {
         String mainMenu = "Patient Menu: \n  1. Edit Name \n  2. Edit Date \n  3. Edit DOB \n  4. Edit SSN \n  5. Return";
         int choice = Util.getIntVal(mainMenu, 1, 5);
