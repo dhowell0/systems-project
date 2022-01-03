@@ -49,8 +49,7 @@ public class Nurse {
     public void menu() {
         String mainMenu = "Nurse Menu: \n  1. Edit Name \n  2. Edit Specialty \n  3. Edit Position \n  4. Edit Badge Number \n  5. Return";
         int choice = Util.getIntVal(mainMenu, 1, 5);
-        boolean isValid = false;
-        while (!isValid) {
+        while (true) {
             switch (choice) {
                 case 1:
                     setName(Util.getStringVal("Nurse Name: ", 1, 999));
@@ -65,8 +64,7 @@ public class Nurse {
                     setBadgeNumber(Util.getIntVal("Badge Number: ", 1, 99999));
                     break;
                 case 5:
-                    isValid = true;
-                    break;
+                    return;
             }
         }
     }

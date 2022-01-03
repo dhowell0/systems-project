@@ -111,8 +111,7 @@ public class Hospitals {
     public void menu() {
         String mainMenu = "Hospital Menu: \n  1. Edit Hospital Name \n  2. Edit Address \n  3. Add Department \n  4. Remove Department \n  5. Add Patient \n  6. Remove Patient \n  7. Edit Patient \n  8. Return";
         int choice = Util.getIntVal(mainMenu, 1, 8);
-        boolean isValid = false;
-        while (!isValid) {
+        while (true) {
             switch (choice) {
                 case 1:
                     setName(Util.getStringVal("Hospital Name: ", 1, 999));
@@ -179,8 +178,7 @@ public class Hospitals {
                     patients[doctorsChoice - 1].menu();
                     break;
                 case 8:
-                    isValid= true;
-                    break;
+                    return;
 
             }
         }

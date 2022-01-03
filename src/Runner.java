@@ -22,8 +22,7 @@ public class Runner {
         Scanner input = new Scanner(System.in);
         String mainMenu = "Menu: \n  1. Add Hospital \n  2. Remove Hospital \n  3. Edit Hospitals \n  4. exit";
         int choice = Util.getIntVal(mainMenu, 1, 4);
-        boolean isValid = false;
-        while (!isValid) {
+        while (true) {
             switch (choice) {
                 case 1:
                     //add doctor
@@ -62,8 +61,7 @@ public class Runner {
                     hospitals[hospitalChoice - 1].menu();
                     break;
                 case 4:
-                    isValid = true;
-                    break;
+                    return;
             }
         }
     }
